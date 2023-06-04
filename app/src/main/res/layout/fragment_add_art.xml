@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.AddArtFragment">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardView"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/addArtImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/img"
+            android:scaleType="centerCrop"
+            />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="380dp"
+        android:layout_height="397dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialCardView"
+        android:elevation="15dp"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="12dp"
+        android:backgroundTint="#C7BEF3">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/addArtDateText"
+                android:layout_width="300dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="44dp"
+                android:background="@drawable/text_bg"
+                android:hint="Made Date"
+                android:inputType="number"
+                android:maxLines="1"
+                android:paddingStart="5dp"
+                android:paddingTop="4dp"
+                android:scrollHorizontally="true"
+                android:textColor="@color/white"
+                android:textColorHint="#C3E6E6E6"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/addArtArtistText"
+                android:layout_width="300dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/text_bg"
+                android:hint="Artist Name"
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingStart="5dp"
+                android:paddingTop="4dp"
+                android:scrollHorizontally="true"
+                android:textColor="@color/white"
+                android:textColorHint="#C3E6E6E6"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/addArtDateText" />
+
+            <EditText
+                android:id="@+id/addArtText"
+                android:layout_width="300dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/text_bg"
+                android:hint="Art Name"
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingStart="5dp"
+                android:paddingTop="4dp"
+                android:scrollHorizontally="true"
+                android:textColor="@color/white"
+                android:textColorHint="#C3E6E6E6"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/addArtArtistText" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/saveButton"
+                android:layout_width="300dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="44dp"
+                android:background="@drawable/button_bg"
+                android:backgroundTint="#1B1A1F"
+                android:text="SAVE"
+                android:textColor="#C7BEF3"
+                android:textSize="18dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/addArtText" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
