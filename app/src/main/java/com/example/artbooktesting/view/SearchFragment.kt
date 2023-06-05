@@ -24,8 +24,8 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 class SearchFragment @Inject constructor(
-    private val searchRecyclerAdapter: SearchRecyclerAdapter,
-    private val viewModel: ArtBookViewModel
+    val searchRecyclerAdapter: SearchRecyclerAdapter,
+    var viewModel: ArtBookViewModel
 ): Fragment() {
     private var _binding : FragmentSearchBinding? = null
     private val binding get() =  _binding!!

@@ -63,6 +63,7 @@ private val repository: ArtBookRepositoryInterface
         }
     }
 
+
     fun makeArt(artName: String, artistName: String, artDate: String){
         if (artName.isEmpty() || artistName.isEmpty() || artDate.isEmpty()){
             insertArtMessage.postValue(Resource.error("Enter values", null))

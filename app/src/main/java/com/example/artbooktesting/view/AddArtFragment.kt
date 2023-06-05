@@ -18,7 +18,7 @@ import javax.inject.Inject
 class AddArtFragment @Inject constructor(
 
     val glide: RequestManager,
-    val viewModel: ArtBookViewModel
+    var viewModel: ArtBookViewModel
 ) : Fragment() {
     private var _binding: FragmentAddArtBinding? = null
     private val binding get() = _binding!!
@@ -55,13 +55,10 @@ class AddArtFragment @Inject constructor(
         requireActivity().onBackPressedDispatcher.addCallback(callback)
 
         binding.saveButton.setOnClickListener{
-            viewModel.makeArt(binding.addArtText.text.toString(),
-                binding.addArtArtistText.text.toString(),
-                binding.addArtDateText.text.toString())
+            viewModel.makeArt(binding.addArtText.text.toString().trim(),
+                binding.addArtArtistText.text.toString().trim(),
+                binding.addArtDateText.text.toString().trim())
         }
-
-
-
     }
 
     private fun subscribeToObservers(){
